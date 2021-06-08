@@ -18,12 +18,14 @@ const TodoHeadBlock = styled.div`
     color: #666;
     font-size: 20px;
   }
-  .tasks-list {
-    margin-top: 40px;
-    color: #ffabab;
-    font-size: 16px;
-    font-weight: bold;
-  }
+`;
+const UndoneTaskList = styled.div`
+  ${(props) =>
+    props.undoneTasks.length === 0 ? `color: #666` : `color: #ffabab`};
+  margin-top: 40px;
+
+  font-size: 16px;
+  font-weight: bold;
 `;
 
 const TodoHead = () => {
@@ -43,7 +45,9 @@ const TodoHead = () => {
     <TodoHeadBlock>
       <h1>{dateString}</h1>
       <div className="day">{dayName}</div>
-      <div className="tasks-list">할 일 {undoneTasks.length}개 남음</div>
+      <UndoneTaskList undoneTasks={undoneTasks}>
+        할 일 {undoneTasks.length}개 남음
+      </UndoneTaskList>
     </TodoHeadBlock>
   );
 };
