@@ -5,10 +5,10 @@ import { MdAdd } from "react-icons/md";
 const CircleButton = styled.button`
   background: #444;
   &:hover {
-    background: #63e6be;
+    background: #555;
   }
   &:active {
-    background: #20c997;
+    background: #333;
   }
 
   display: flex;
