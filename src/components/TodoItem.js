@@ -58,7 +58,8 @@ const Text = styled.div`
   ${(props) =>
     props.done &&
     css`
-      color: #ffabab;
+      color: #666;
+      text-decoration: line-through;
     `}
 `;
 
